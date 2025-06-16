@@ -25,3 +25,9 @@ export { asyncHandler }
 //         })
 //     }
 // }
+
+
+// Why Use It?
+// In Express, if an async function throws an error, it won't be automatically
+//  caught unless you try/catch it yourself. This utility saves you from writing repetitive try/catch in every route.
+

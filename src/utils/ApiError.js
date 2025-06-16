@@ -9,7 +9,7 @@ class ApiError extends Error {
         this.statusCode = statusCode
         this.data = null
         this.message = message
-        this.success = false;
+        this.success = false;                                          
         this.errors = errors
 
         if (stack) {
@@ -22,3 +22,7 @@ class ApiError extends Error {
 }
 
 export {ApiError}
+
+
+// Why Use This Class?
+// In an API project, you often need to send structured error responses to the frontend. This helps maintain consistency.

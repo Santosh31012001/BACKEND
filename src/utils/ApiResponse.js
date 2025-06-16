@@ -8,3 +8,7 @@ class ApiResponse {
 }
 
 export { ApiResponse }
+
+
+//  Why Use ApiResponse?
+// To standardize all successful API responses with a common structure. This makes it easy for frontend apps to handle responses predictably.
