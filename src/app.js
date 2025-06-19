@@ -3,28 +3,28 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 
 const app = express();
+
+// Middlewares
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
-    Credentials: true
+    credentials: true  // Fixed capitalization
 }));
+
 app.use(express.json({limit: "50mb"}));
 app.use(express.urlencoded({extended: true, limit: "50mb"}));
 app.use(express.static("public"));
 app.use(cookieParser());
 
 
-app.get("/",(req , res)=>{
-    res.send("hello word")
-})
 //routes import
 import userRoute from "./routes/user.route.js";
 
- 
-
-//routes declaration
+// Routes
 app.use("/api/v1/users", userRoute);
 
+// Test route
+app.get("/", (req, res) => {
+    res.send("Hello world")
+})
 
-
-
-export {app}
+export default app;
