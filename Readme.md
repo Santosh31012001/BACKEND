@@ -95,28 +95,9 @@ BACKEND/
 2. **Install dependencies**
    ```bash
    npm install
-   ```
+   `````
 
-3. **Environment Setup**
-   Create a `.env` file in the root directory with the following variables:
-   ```env
-   PORT=8000
-   MONGODB_URI=your_mongodb_connection_string
-   CORS_ORIGIN=http://localhost:3000
-   
-   # JWT Configuration
-   ACCESS_TOKEN_SECRET=your_access_token_secret
-   REFRESH_TOKEN_SECRET=your_refresh_token_secret
-   ACCESS_TOKEN_EXPIRY=1d
-   REFRESH_TOKEN_EXPIRY=10d
-   
-   # Cloudinary Configuration
-   CLOUDINARY_CLOUD_NAME=your_cloud_name
-   CLOUDINARY_API_KEY=your_api_key
-   CLOUDINARY_API_SECRET=your_api_secret
-   ```
-
-4. **Run the development server**
+3. **Run the development server**
    ```bash
    npm run dev
    ```
@@ -141,33 +122,6 @@ The server will start on `http://localhost:8000`
 | GET | `/c/:username` | Get user channel profile | Yes |
 | GET | `/history` | Get user watch history | Yes |
 
-### Request/Response Examples
-
-#### User Registration
-```http
-POST /api/v1/users/register
-Content-Type: multipart/form-data
-
-{
-  "fullName": "John Doe",
-  "email": "john@example.com",
-  "username": "johndoe",
-  "password": "password123",
-  "avatar": [file],
-  "coverImage": [file] // optional
-}
-```
-
-#### User Login
-```http
-POST /api/v1/users/login
-Content-Type: application/json
-
-{
-  "email": "john@example.com",
-  "password": "password123"
-}
-```
 
 ## 🔐 Authentication
 
